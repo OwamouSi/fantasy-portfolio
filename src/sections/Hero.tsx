@@ -5,7 +5,7 @@ import Button from "../components/ui/Button"
 
 export default function Hero() {
   return (
-    <Section bg="/images/backgrounds/bg-hero.jpg">
+    <Section bg="/images/backgrounds/bg-hero.jpg" id="hero">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
