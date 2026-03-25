@@ -1,12 +1,21 @@
 import Container from "../components/layout/Container";
 import Section from "../components/layout/Section";
+import { projects } from "../data/projects"
+import ProjectCard from "../components/ui/ProjectCard"
 
 export default function Projects() {
   return (
     <Section>
       <Container>
-        <h2 className="text-4xl font-bold mb-4">Projects</h2>
-        <p className="text-gray-300">Here will be my portfolio projects (chess trainer, fantasy book tracker, etc.)</p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {projects.map(p => (
+            <ProjectCard
+            key={p.id}
+            title={p.title}
+            description={p.description}
+            />
+          ))}
+        </div>
       </Container>
     </Section>
   );
