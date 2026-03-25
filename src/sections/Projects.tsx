@@ -5,7 +5,7 @@ import ProjectCard from "../components/ui/ProjectCard"
 
 export default function Projects() {
   return (
-    <Section>
+    <Section id="projects">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {projects.map(p => (

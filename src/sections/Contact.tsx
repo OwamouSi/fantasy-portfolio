@@ -3,7 +3,7 @@ import Section from "../components/layout/Section";
 
 export default function Contact() {
   return (
-    <Section>
+    <Section id="contact">
       <Container>
         <h2 className="text-4xl font-bold mb-4">Contact</h2>
         <p className="text-gray-300">You can reach me via email or social links.</p>
