@@ -1,6 +1,7 @@
 import Container from "../components/layout/Container";
 import Section from "../components/layout/Section";
 import { motion } from "framer-motion";
+import Button from "../components/ui/Button"
 
 export default function Hero() {
   return (
@@ -16,12 +17,8 @@ export default function Hero() {
           <p className="mt-6 text-xl text-gray-300">Frontend Developer</p>
 
           <div className="flex gap-4 justify-center mt-8">
-            <button className="px-6 py-3 bg-amber-700 rounded-lg text-white">
-              View Projects
-            </button>
-            <button className="px-6 py-3 bg-gray-700 rounded-lg text-white">
-              Contact
-            </button>
+            <Button>View Projects</Button>
+            <Button variant="secondary">Contact</Button>
           </div>
         </motion.div>
       </Container>
