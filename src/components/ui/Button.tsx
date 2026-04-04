@@ -1,19 +1,22 @@
-type Props = {
-  children: React.ReactNode
-  variant?: "primary" | "secondary"
-}
+type ButtonProps = {
+  children: React.ReactNode;
+  variant?: "primary" | "secondary";
+};
 
-export default function Button({ children, variant = "primary" }: Props) {
-  const base = "px-6 py-3 rounded-lg transition"
+export default function Button({ children, variant = "primary" }: ButtonProps) {
+  const base =
+    "px-6 py-3 rounded-xl font-medium transition-all duration-300";
 
-  const styles = {
-    primary: "bg-amber-700 hover:bg-amber-600 text-white",
-    secondary: "bg-gray-700 hover:bg-gray-600 text-white"
-  }
+  const variants = {
+    primary:
+      "bg-purple-600 text-white hover:bg-purple-500 hover:shadow-[0_0_20px_rgba(168,85,247,0.6)]",
+    secondary:
+      "border border-white/20 text-white hover:bg-white/10",
+  };
 
   return (
-    <button className={`${base} ${styles[variant]}`}>
+    <button className={`${base} ${variants[variant]}`}>
       {children}
     </button>
-  )
+  );
 }
